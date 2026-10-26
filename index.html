@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US Mouy Football - Fiches de Rencontre</title>
     <meta name="theme-color" content="#1b4d3e">
-    <link rel="manifest" href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%22US%20Mouy%20Football%22%2C%22short_name%22%3A%22US%20Mouy%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%231b4d3e%22%2C%22icons%22%3A%5B%5D%7D">
+    
+    <!-- Configuration PWA et Icône Mobile -->
+    <link rel="manifest" href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%22US%20Mouy%20Football%22%2C%22short_name%22%3A%22US%20Mouy%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%231b4d3e%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22logo192.png%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2fpng%22%7D%5D%7D">
+    <link rel="apple-touch-icon" href="logo192.png">
+
     <style>
         :root {
-            --primary: #1b4d3e; /* Vert officiel US Mouy */
+            --primary: #1b4d3e;
             --primary-dark: #113328;
-            --accent: #d32f2f; /* Rouge officiel US Mouy */
+            --accent: #d32f2f;
             --accent-dark: #9a0007;
             --gold: #fbc02d;
             --dark: #212121;
@@ -306,7 +310,6 @@
             cursor: pointer;
         }
 
-        /* RENDU EXACT DU PDF FINAL */
         .pdf-page {
             border: 2px solid var(--primary);
             padding: 20px;
@@ -334,6 +337,8 @@
         .pdf-logo {
             width: 60px;
             height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .pdf-title-block h2 {
@@ -401,7 +406,7 @@
 
     <header>
         <div class="club-header">
-            <img src="logo.png" alt="Logo US Mouy" class="club-logo-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'55\' height=\'55\'><circle cx=\'27\' cy=\'27\' r=\'27\' fill=\'%231b4d3e\'/><text x=\'50%\' y=\'55%\' fill=\'white\' font-size=\'10\' font-weight=\'bold\' text-anchor=\'middle\' dominant-baseline=\'middle\'>US MOUY</text></svg>'">
+            <img src="logo192.png" alt="Logo US Mouy" class="club-logo-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'55\' height=\'55\'><circle cx=\'27\' cy=\'27\' r=\'27\' fill=\'%231b4d3e\'/><text x=\'50%\' y=\'55%\' fill=\'white\' font-size=\'10\' font-weight=\'bold\' text-anchor=\'middle\' dominant-baseline=\'middle\'>US MOUY</text></svg>'">
             <div class="club-titles">
                 <h1>US MOUY FOOTBALL</h1>
                 <p>Fiches Officielles de Rencontre - Mairie de Mouy</p>
@@ -422,7 +427,7 @@
         <!-- FORMULAIRE 1 : AVANT RENCONTRE -->
         <div id="section-avant" class="form-section active">
             <h2>Fiche Avant Rencontre</h2>
-            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À transmettre à la mairie avant la rencontre pour communiquer les horaires et les responsables prévus[span_3](start_span)[span_3](end_span).</p>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À transmettre à la mairie avant la rencontre pour communiquer les horaires et les responsables prévus[span_8](start_span)[span_8](end_span).</p>
 
             <form id="formAvant">
                 <h3>1. Rencontre et horaires prévus</h3>
@@ -548,7 +553,7 @@
         <!-- FORMULAIRE 2 : APRES RENCONTRE -->
         <div id="section-apres" class="form-section">
             <h2>Fiche Après Rencontre</h2>
-            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À compléter après la rencontre et à transmettre à la mairie pour rendre compte de l'utilisation et de l'état des installations[span_4](start_span)[span_4](end_span).</p>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À compléter après la rencontre et à transmettre à la mairie pour rendre compte de l'utilisation et de l'état des installations[span_9](start_span)[span_9](end_span).</p>
 
             <form id="formApres">
                 <h3>1. Rencontre et utilisation effective</h3>
@@ -781,7 +786,7 @@
                 <div class="pdf-page">
                     <div class="pdf-header">
                         <div class="pdf-header-left">
-                            <img src="logo.png" class="pdf-logo" onerror="this.style.display='none'">
+                            <img src="logo192.png" class="pdf-logo" onerror="this.style.display='none'">
                             <div class="pdf-title-block">
                                 <h2>US MOUY FOOTBALL</h2>
                                 <p>UNION SPORTIVE MOUY FOOTBALL</p>
@@ -789,7 +794,7 @@
                             </div>
                         </div>
                     </div>
-                    <p style="font-size:10px; font-style:italic; margin-bottom:10px;">À transmettre à la mairie avant la rencontre pour communiquer les horaires et les responsables prévus.</p>
+                    <p style="font-size:10px; font-style:italic; margin-bottom:10px;">À transmettre à la mairie avant la rencontre pour communiquer les horaires et les responsables prévus[span_10](start_span)[span_10](end_span).</p>
 
                     <div class="pdf-section-title">1 Rencontre et horaires prévus</div>
                     <div class="pdf-grid-2">
@@ -835,14 +840,14 @@
                 <div class="pdf-page">
                     <div class="pdf-header">
                         <div class="pdf-header-left">
-                            <img src="logo.png" class="pdf-logo" onerror="this.style.display='none'">
+                            <img src="logo192.png" class="pdf-logo" onerror="this.style.display='none'">
                             <div class="pdf-title-block">
                                 <h2>US MOUY FOOTBALL</h2>
                                 <p><b>Fiche après rencontre</b> - Stade principal de Mouy</p>
                             </div>
                         </div>
                     </div>
-                    <p style="font-size:10px; font-style:italic; margin-bottom:10px;">À compléter après la rencontre et à transmettre à la mairie pour rendre compte de l'utilisation et de l'état des installations.</p>
+                    <p style="font-size:10px; font-style:italic; margin-bottom:10px;">À compléter après la rencontre et à transmettre à la mairie pour rendre compte de l'utilisation et de l'état des installations[span_11](start_span)[span_11](end_span).</p>
 
                     <div class="pdf-section-title">1 Rencontre et utilisation effective</div>
                     <p><b>Rencontre:</b> [X] ${document.getElementById('ap_statut').value} | <b>Responsable présent:</b> ${document.getElementById('ap_resp').value}</p>
