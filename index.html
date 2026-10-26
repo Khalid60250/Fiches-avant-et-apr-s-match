@@ -395,510 +395,7 @@
         <!-- FORMULAIRE 1 : AVANT RENCONTRE -->
         <div id="section-avant" class="form-section active">
             <h2>Fiche Avant Rencontre</h2>
-            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À transmettre à la mairie avant la rencontre pour communiquer les horaires et responsables.</p>
-
-            <form id="formAvant">
-                <h3>1. Rencontre et horaires prévus</h3>
-                <div class="row">
-                    <div class="form-group">
-                        <label>Date</label>
-                        <input type="date" id="av_date" value="2026-09-27">
-                    </div>
-                    <div class="form-group">
-                        <label>Catégorie et équipe</label>
-                        <input type="text" id="av_cat" value="VÉTÉRANS">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label>Club visiteur</label>
-                        <input type="text" id="av_visiteur" value="ÉTOUY - AGNETS">
-                    </div>
-                    <div class="form-group">
-                        <label>Compétition</label>
-                        <input type="text" id="av_comp" value="Foot loisir">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label>Coup d'envoi</label>
-                        <input type="time" id="av_ce" value="10:00">
-                    </div>
-                    <div class="form-group">
-                        <label>Ouverture du stade</label>
-                        <input type="time" id="av_ouv" value="09:00">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Fermeture prévue</label>
-                    <input type="time" id="av_ferm" value="13:00">
-                </div>
-
-                <h3>2. Dirigeants désignés</h3>
-                <div class="form-group">
-                    <label>Responsable général de la rencontre</label>
-                    <input type="text" id="av_resp_gen" value="Khalid Bouchehait">
-                </div>
-                <div class="form-group">
-                    <label>Second dirigeant de la rencontre</label>
-                    <input type="text" id="av_dir2" value="Tonio Carvalho">
-                </div>
-                <div class="form-group">
-                    <label>État des lieux avant et après</label>
-                    <input type="text" id="av_edl" value="Khalid Bouchehait">
-                </div>
-                <div class="form-group">
-                    <label>Buvette et nettoyage de son espace</label>
-                    <input type="text" id="av_buvette_resp" value="Alix Amaral Pereira">
-                </div>
-                <div class="form-group">
-                    <label>Vestiaires et vérification</label>
-                    <input type="text" id="av_vest_resp" value="Tonio Carvalho">
-                </div>
-                <div class="form-group">
-                    <label>Encadrement ramasseurs de balles</label>
-                    <input type="text" id="av_ramasseurs_resp" value="Sans encadrant 4 adultes">
-                </div>
-
-                <h3>3. Organisation & Besoins particuliers</h3>
-                <div class="row">
-                    <div class="form-group">
-                        <label>Buvette prévue</label>
-                        <select id="av_buvette_oui">
-                            <option value="Oui">Oui</option>
-                            <option value="
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US Mouy Football - Fiches de Rencontre</title>
-    <!-- PWA Manifest & Meta -->
-    <meta name="theme-color" content="#d32f2f">
-    <link rel="manifest" href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%22US%20Mouy%20Football%22%2C%22short_name%22%3A%22US%20Mouy%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%23d32f2f%22%2C%22icons%22%3A%5B%5D%7D">
-    <style>
-        :root {
-            --primary: #c62828; /* Rouge club */
-            --primary-dark: #b71c1c;
-            --accent: #fbc02d; /* Jaune club */
-            --dark: #212121;
-            --light: #f5f5f5;
-            --gray: #9e9e9e;
-            --border: #e0e0e0;
-            --success: #2e7d32;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #fafafa;
-            color: var(--dark);
-            line-height: 1.5;
-            padding-bottom: 50px;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .club-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 0.5rem;
-        }
-
-        .club-logo {
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: var(--primary);
-            border: 3px solid var(--accent);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            font-size: 11px;
-            text-align: center;
-            line-height: 1.1;
-        }
-
-        header h1 {
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        header p {
-            font-size: 0.85rem;
-            opacity: 0.9;
-        }
-
-        /* Bannière d'installation PWA */
-        #pwa-install-banner {
-            display: none;
-            background: var(--accent);
-            color: var(--dark);
-            padding: 10px 15px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 0.9rem;
-            cursor: pointer;
-            box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-
-        /* Onglets de navigation */
-        .tabs {
-            display: flex;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin: 15px 0;
-            border: 1px solid var(--border);
-        }
-
-        .tab {
-            flex: 1;
-            padding: 12px;
-            text-align: center;
-            background: white;
-            border: none;
-            font-weight: bold;
-            font-size: 0.9rem;
-            color: var(--gray);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .tab.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Sections Formulaire */
-        .form-section {
-            display: none;
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-            border: 1px solid var(--border);
-        }
-
-        .form-section.active {
-            display: block;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            color: var(--primary-dark);
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            margin-top: 10px;
-        }
-
-        h3 {
-            font-size: 0.95rem;
-            color: var(--dark);
-            margin: 15px 0 10px 0;
-        }
-
-        .form-group {
-            margin-bottom: 12px;
-        }
-
-        label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #444;
-        }
-
-        input[type="text"],
-        input[type="date"],
-        input[type="time"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 0.95rem;
-            background: #fff;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(198, 40, 40, 0.1);
-        }
-
-        .row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        @media (max-width: 600px) {
-            .row {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Tableau d'état des lieux */
-        .checklist-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 10px 0;
-            font-size: 0.85rem;
-        }
-
-        .checklist-table th, .checklist-table td {
-            border: 1px solid var(--border);
-            padding: 8px;
-            text-align: left;
-        }
-
-        .checklist-table th {
-            background-color: #f1f1f1;
-            font-weight: 600;
-        }
-
-        /* Boutons d'actions */
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 1rem;
-            cursor: pointer;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: background 0.2s;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .btn:hover {
-            background: var(--primary-dark);
-        }
-
-        .btn-secondary {
-            background: #455a64;
-        }
-        .btn-secondary:hover {
-            background: #37474f;
-        }
-
-        .btn-accent {
-            background: var(--accent);
-            color: var(--dark);
-        }
-        .btn-accent:hover {
-            background: #f9a825;
-        }
-
-        /* Zone Photo & Signature */
-        .photo-preview-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .photo-thumb {
-            position: relative;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            overflow: hidden;
-            background: #eee;
-            aspect-ratio: 1;
-        }
-
-        .photo-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .photo-thumb button {
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            background: rgba(0,0,0,0.6);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 22px;
-            height: 22px;
-            font-size: 12px;
-            cursor: pointer;
-        }
-
-        canvas.signature-pad {
-            border: 1px dashed var(--gray);
-            border-radius: 6px;
-            width: 100%;
-            height: 120px;
-            background: #fff;
-            cursor: crosshair;
-        }
-
-        /* Modale d'Aperçu */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
-            padding: 20px;
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: auto;
-            padding: 25px;
-            border-radius: 8px;
-            max-width: 700px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            position: relative;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .close-modal {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close-modal:hover {
-            color: black;
-        }
-
-        /* Style Impression / Fiche PDF */
-        .print-sheet {
-            background: white;
-            color: black;
-            padding: 20px;
-            font-size: 13px;
-        }
-
-        .print-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-
-        @media print {
-            body * {
-                visibility: hidden;
-            }
-            #printModal, #printModal * {
-                visibility: visible;
-            }
-            #printModal {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                background: white;
-            }
-            .modal {
-                background: white;
-                padding: 0;
-            }
-            .modal-content {
-                box-shadow: none;
-                max-height: none;
-                width: 100%;
-                padding: 0;
-            }
-            .no-print {
-                display: none !important;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div id="pwa-install-banner" onclick="installPWA()">
-        📲 Installer l'application US Mouy Football sur votre téléphone
-    </div>
-
-    <header>
-        <div class="container">
-            <div class="club-header">
-                <div class="club-logo">US MOUY<br>FOOT</div>
-                <div>
-                    <h1>US MOUY FOOTBALL</h1>
-                    <p>Gestion des Fiches de Rencontre - Stade Principal</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- Bouton Démo Rapide -->
-        <button type="button" class="btn btn-accent" onclick="remplirDemo()" style="margin-bottom: 15px; width: 100%;">
-            ⚡ Remplir automatiquement (Données Test du match vs Étouy)
-        </button>
-
-        <!-- Navigation Onglets -->
-        <div class="tabs">
-            <button class="tab active" onclick="switchTab('avant')">1. Fiche Avant Rencontre</button>
-            <button class="tab" onclick="switchTab('apres')">2. Fiche Après Rencontre</button>
-        </div>
-
-        <!-- FORMULAIRE 1 : AVANT RENCONTRE -->
-        <div id="section-avant" class="form-section active">
-            <h2>Fiche Avant Rencontre</h2>
-            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À transmettre à la mairie avant la rencontre pour communiquer les horaires et responsables[span_0](start_span)[span_0](end_span).</p>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À transmettre à la mairie avant la rencontre pour communiquer les horaires et responsables[span_1](start_span)[span_1](end_span).</p>
 
             <form id="formAvant">
                 <h3>1. Rencontre et horaires prévus</h3>
@@ -1008,7 +505,7 @@
         <!-- FORMULAIRE 2 : APRES RENCONTRE -->
         <div id="section-apres" class="form-section">
             <h2>Fiche Après Rencontre</h2>
-            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À compléter après la rencontre pour rendre compte de l'état des installations[span_1](start_span)[span_1](end_span).</p>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">À compléter après la rencontre pour rendre compte de l'état des installations[span_2](start_span)[span_2](end_span).</p>
 
             <form id="formApres">
                 <h3>1. Utilisation effective</h3>
@@ -1089,7 +586,7 @@
 
                 <div class="form-group">
                     <label>📸 Photos des installations (État des lieux)</label>
-                    <input type="file" id="ap_photos" accept="image/*" multiple oncharger="handlePhotos(event)" onchange="handlePhotos(event)">
+                    <input type="file" id="ap_photos" accept="image/*" multiple onchange="handlePhotos(event)">
                     <div id="photoPreview" class="photo-preview-container"></div>
                 </div>
 
@@ -1113,9 +610,7 @@
     <div id="printModal" class="modal">
         <div class="modal-content">
             <span class="close-modal no-print" onclick="fermerApercu()">&times;</span>
-            <div id="apercuContenu" class="print-sheet">
-                <!-- Rempli dynamiquement -->
-            </div>
+            <div id="apercuContenu" class="print-sheet"></div>
             <div class="btn-container no-print" style="margin-top: 20px;">
                 <button type="button" class="btn" onclick="window.print()">🖨️ Imprimer / Sauvegarder en PDF</button>
             </div>
@@ -1123,11 +618,9 @@
     </div>
 
     <script>
-        // Gestion des onglets
         function switchTab(tabName) {
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
-            
             if(tabName === 'avant') {
                 document.querySelectorAll('.tab')[0].classList.add('active');
                 document.getElementById('section-avant').classList.add('active');
@@ -1137,16 +630,13 @@
             }
         }
 
-        // Bouton Démo
         function remplirDemo() {
             alert("Données pré-remplies avec succès (Match US Mouy vs Étouy) !");
         }
 
-        // Gestion Photos
         let uploadedPhotos = [];
         function handlePhotos(e) {
             const files = e.target.files;
-            const previewContainer = document.getElementById('photoPreview');
             for(let file of files) {
                 const reader = new FileReader();
                 reader.onload = function(event) {
@@ -1173,7 +663,6 @@
             renderPhotos();
         }
 
-        // Canvas Signature
         const canvas = document.getElementById('signaturePad');
         const ctx = canvas.getContext('2d');
         let isDrawing = false;
@@ -1208,45 +697,40 @@
         }
 
         function stopDraw() { isDrawing = false; }
-        function clearSignature() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-        }
+        function clearSignature() { ctx.clearRect(0, 0, canvas.width, canvas.height); }
 
-        // Prévisualisation avant transmission
         function previsualiserFiche(type) {
             const modal = document.getElementById('printModal');
             const content = document.getElementById('apercuContenu');
-            
             let html = `
                 <div class="print-header">
                     <div>
-                        <h2 style="color: #c62828; border:none; margin:0;">UNION SPORTIVE MOUY FOOTBALL</h2>
-                        <p style="font-size:11px;">Stade principal de Mouy</p>
+                        <h2 style="color: #1b4d3e; border:none; margin:0; font-size:16px;">UNION SPORTIVE MOUY FOOTBALL</h2>
+                        <p style="font-size:11px; color:#555;">Stade principal de Mouy</p>
                     </div>
-                    <div style="text-align:right; font-weight:bold; font-size:12px;">
+                    <div style="text-align:right; font-weight:bold; font-size:12px; color:#d32f2f;">
                         ${type === 'avant' ? 'FICHE AVANT RENCONTRE' : 'FICHE APRÈS RENCONTRE'}
                     </div>
                 </div>
             `;
-
             if(type === 'avant') {
                 html += `
                     <p><b>Date :</b> ${document.getElementById('av_date').value} | <b>Catégorie :</b> ${document.getElementById('av_cat').value}</p>
                     <p><b>Visiteur :</b> ${document.getElementById('av_visiteur').value} | <b>Compétition :</b> ${document.getElementById('av_comp').value}</p>
                     <p><b>Coup d'envoi :</b> ${document.getElementById('av_ce').value} (Ouverture : ${document.getElementById('av_ouv').value})</p>
-                    <hr style="margin:10px 0;">
+                    <hr style="margin:10px 0; border:0; border-top:1px solid #ddd;">
                     <p><b>Responsable Général :</b> ${document.getElementById('av_resp_gen').value}</p>
                     <p><b>Second Dirigeant :</b> ${document.getElementById('av_dir2').value}</p>
                     <p><b>Buvette :</b> ${document.getElementById('av_buvette_resp').value}</p>
                     <p><b>Vestiaires :</b> ${document.getElementById('av_vest_resp').value}</p>
-                    <hr style="margin:10px 0;">
+                    <hr style="margin:10px 0; border:0; border-top:1px solid #ddd;">
                     <p><b>Validation Président :</b> ${document.getElementById('av_president').value} (${document.getElementById('av_date_val').value})</p>
                 `;
             } else {
                 html += `
                     <p><b>Statut :</b> ${document.getElementById('ap_statut').value} | <b>Responsable :</b> ${document.getElementById('ap_resp').value}</p>
                     <p><b>Horaires :</b> Ouverture ${document.getElementById('ap_ouv').value} - Fermeture ${document.getElementById('ap_ferm').value}</p>
-                    <hr style="margin:10px 0;">
+                    <hr style="margin:10px 0; border:0; border-top:1px solid #ddd;">
                     <p><b>Anomalies / Constats :</b> ${document.getElementById('ap_anomalies').value}</p>
                     <p><b>Nombre de photos jointes :</b> ${uploadedPhotos.length}</p>
                 `;
@@ -1254,16 +738,12 @@
                     html += `<p style="margin-top:15px;"><b>Signature :</b><br><img src="${canvas.toDataURL()}" style="max-height:60px; margin-top:5px;"></p>`;
                 }
             }
-
             content.innerHTML = html;
             modal.style.display = 'block';
         }
 
-        function fermerApercu() {
-            document.getElementById('printModal').style.display = 'none';
-        }
+        function fermerApercu() { document.getElementById('printModal').style.display = 'none'; }
 
-        // Partage Dirigeants
         function partagerDirigeants(type) {
             const text = `Bonjour les dirigeants de l'US Mouy, voici le récapitulatif de la fiche (${type === 'avant' ? 'Avant Rencontre' : 'Après Rencontre'}) prête pour le match.`;
             if (navigator.share) {
@@ -1273,14 +753,12 @@
             }
         }
 
-        // Envoi Email Mairie
         function envoyerMairie(type) {
             const sujet = encodeURIComponent(`US MOUY FOOTBALL - Fiche ${type === 'avant' ? 'Avant' : 'Après'} Rencontre`);
             const corps = encodeURIComponent(`Bonjour,\n\nVeuillez trouver ci-joint le compte-rendu officiel de la rencontre de l'US Mouy Football.\n\nCordialement,\nLe Club.`);
             window.location.href = `mailto:mairie@mouy.fr?subject=${sujet}&body=${corps}`;
         }
 
-        // Gestion PWA Install
         let deferredPrompt;
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
